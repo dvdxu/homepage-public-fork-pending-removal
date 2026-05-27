@@ -59,7 +59,7 @@ I won **3rd place** at the **2025 World Humanoid Robot Games** (Field Events) an
 In Submission
 
 [**DOI**](https://doi.org/10.48550/arXiv.2605.25782) &nbsp; **First Author**
-- Proposed a minimalist-design segmentation model (Taoism-Net) for drone-view fruit detection, achieving state-of-the-art accuracy with significantly reduced model complexity.
+- We introduce a novel "now → past → future" paradigm, where the current state queries historical trajectories to explicitly predict future outcomes, demonstrating strong adaptability to various challenging environments.
 </div>
 </div>
 
