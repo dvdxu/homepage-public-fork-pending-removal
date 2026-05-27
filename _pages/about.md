@@ -31,7 +31,7 @@ I won **3rd place** at the **2025 World Humanoid Robot Games** (Field Events) an
     <img src="images/logo-scau.jpg" alt="SCAU" style="height:70px; object-fit:contain;">
   </a>
   <a href="https://clai-lab.com/" target="_blank">
-    <img src="images/logo-company.jpeg" alt="Company" style="height:80px; object-fit:contain;">
+    <img src="images/logo-clailab.jpg" alt="Company" style="height:80px; object-fit:contain;">
   </a>
 </div>
 
@@ -48,6 +48,20 @@ I won **3rd place** at the **2025 World Humanoid Robot Games** (Field Events) an
 
 
 # 📝 Publications
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">In Submission(arxiv)</div><img src='images/parkourformer.jpg' alt="ParkourFormer" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[ParkourFormer: Integrating Predictive Supervision and Sequence Modeling into Parkour Locomotion](https://mronaldo-gif.github.io/parkourformer.github.io/)
+
+**Yanheng Mai**, et al.
+
+In Submission
+
+[**DOI**](https://doi.org/10.48550/arXiv.2605.25782) &nbsp; **First Author**
+- Proposed a minimalist-design segmentation model (Taoism-Net) for drone-view fruit detection, achieving state-of-the-art accuracy with significantly reduced model complexity.
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Agronomy 2024</div><img src='images/agriculture.jpeg' alt="Taoism-Net" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
