@@ -21,7 +21,11 @@ python -m http.server 8000
 
 本站资源和锚点均使用相对路径，兼容项目子路径。`.nojekyll` 禁用不需要的 Jekyll 构建。
 
-此目录保留了参考仓库的 Git 历史，远程名为 `upstream`。尚未创建 GitHub 平台上的 fork、配置个人 origin 或发布网站。可在将本地更改提交后设置个人 origin 并推送；不要向 upstream 推送。
+已发布网站：https://dvdxu.github.io/
+
+正式 fork：https://github.com/dvdxu/dvdxu.github.io
+
+此目录保留参考仓库 Git 历史。`origin` 指向个人仓库，`upstream` 指向参考仓库。GitHub Pages 从 `main` 分支根目录发布。修改后提交并推送到 `origin/main` 即可更新；不要向 upstream 推送。
 
 ## 编辑内容
 
@@ -31,7 +35,7 @@ python -m http.server 8000
 - `assets/Wenhao_Xu_Resume.pdf`：简历下载源文件。
 - `assets/favicon.svg`：姓名缩写标识。
 
-没有简历可确认的头像、GitHub / Scholar 账号，因此未虚构这些资料。头像位置使用 WX 字母标识；如需换成照片，可替换 `.monogram` 元素并调整样式。没有推断论文录用状态、作者名单或学位类型。履历结束时间遵循简历。机器人马拉松奖项年份在简历中未提供，页面以破折号显示。研究指标来自简历，外部论文链接按简历原样保留。
+GitHub 账号 dvdxu 已由本人确认并加入页面。没有简历可确认的头像或 Scholar 账号，因此未虚构这些资料。头像位置使用 WX 字母标识；如需换成照片，可替换 `.monogram` 元素并调整样式。没有推断论文录用状态、作者名单或学位类型。履历结束时间遵循简历。机器人马拉松奖项年份在简历中未提供，页面以破折号显示。研究指标来自简历，外部论文链接按简历原样保留。
 
 ## 来源与许可
 
