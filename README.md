@@ -1,72 +1,44 @@
+# Wenhao Xu — Personal homepage
 
-<h1 align="center">
-AcadHomepage
-</h1>
+基于 Wenhao_Xu_Resume.pdf 整理的英文科研主页，参考 Yanheng Mai 的学术主页双栏结构，优化字体、导航、研究条目、留白和手机布局。纯 HTML / CSS / JavaScript，无构建依赖、外部字体或统计脚本；可直接打开 index.html。
 
-<div align="center">
+## 本地预览
 
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md) 
-</div>
+在本目录运行：
 
-<p align="center">A Modern and Responsive Academic Personal Homepage</p>
+```powershell
+python -m http.server 8000
+```
 
-<p align="center">
-    <br>
-    <img src="docs/screenshot.png" width="100%"/>
-    <br>
-</p>
+浏览器访问 http://localhost:8000 。也可双击 index.html 离线浏览。邮件复制在本地文件模式可能被浏览器限制，此时会自动选中地址供手动复制。
 
-Some examples:
-- [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
-- [Personal Homepage of the author](https://rayeren.github.io/)
+## 发布到 GitHub Pages
 
-## Key Features
-- **Automatically update google scholar citations**: using the google scholar crawler and github action, this REPO can update the author citations and publication citations automatically.
-- **Support Google analytics**: you can trace the traffics of your homepage by easy configuration.
-- **Responsive**: this homepage automatically adjust for different screen sizes and viewports.
-- **Beautiful and Simple Design**: this homepage is beautiful and simple, which is very suitable for academic personal homepage.
-- **SEO**: search Engine Optimization (SEO) helps search engines find the information you publish on your homepage easily, then rank it against similar websites.
+1. 在自己的 GitHub 账号下创建仓库，或通过 https://github.com/MRonaldo-gif/mronaldo.github.io/fork 创建正式 fork。
+2. 上传本目录当前文件（不是 reference-site；不要上传父目录的个人材料）。如使用已有的正式 fork，可先将其克隆，再用本目录文件替换网站文件，并删除原模板的 `.github/workflows` 构建流程。
+3. 仓库 Settings → Pages → Build and deployment：选择 **Deploy from a branch**，分支为 `main`，目录为 `/ (root)`。
+4. 普通仓库网址为 `https://你的用户名.github.io/仓库名/`；若仓库名为 `你的用户名.github.io`，则网址为 `https://你的用户名.github.io/`。
 
-## Quick Start
+本站资源和锚点均使用相对路径，兼容项目子路径。`.nojekyll` 禁用不需要的 Jekyll 构建。
 
-1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
-1. Configure the google scholar citation crawler:
-    1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
-    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
-1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
-1. Modify the configuration of your homepage `_config.yml`:
-    1. `title`: the title of your homepage
-    1. `description`: the description of your homepage
-    1. `repository`: USER_NAME/REPO_NAME  
-    1. `google_analytics_id` (optional): google analytics ID
-    1. SEO Related keys (optional): get these keys from search engine consoles (e.g. Google, Bing and Baidu) and paste here.
-    1. `author`: the author information of this homepage, including some other websites, emails, city and univeristy.
-    1. More configuration details are described in the comments.
-1. Add your homepage content in `_pages/about.md`.
-    1. You can use html+markdown syntax just same as jekyll.
-    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
-        ```html
-        <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
-        ``` 
-        > Q: How to get the google scholar paper ID?   
-        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
-1. Your page will be published at `https://USERNAME.github.io`.
+此目录保留了参考仓库的 Git 历史，远程名为 `upstream`。尚未创建 GitHub 平台上的 fork、配置个人 origin 或发布网站。可在将本地更改提交后设置个人 origin 并推送；不要向 upstream 推送。
 
-## Debug Locally
+## 编辑内容
 
-1. Clone your REPO to local using `git clone`.
-1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
-1. Run `bash run_server.sh` to start Jekyll livereload server.
-1. Open http://127.0.0.1:4000 in your browser.
-1. If you change the source code of the website, the livereload server will automatically refresh.
-1. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
+- `index.html`：个人资料、研究、经历、教育、荣誉、邮箱。
+- `styles.css`：颜色、排版、手机布局和打印样式。
+- `script.js`：研究筛选、导航、邮件复制。
+- `assets/Wenhao_Xu_Resume.pdf`：简历下载源文件。
+- `assets/favicon.svg`：姓名缩写标识。
 
-# Acknowledges
+没有简历可确认的头像、GitHub / Scholar 账号，因此未虚构这些资料。头像位置使用 WX 字母标识；如需换成照片，可替换 `.monogram` 元素并调整样式。没有推断论文录用状态、作者名单或学位类型。履历结束时间遵循简历。机器人马拉松奖项年份在简历中未提供，页面以破折号显示。研究指标来自简历，外部论文链接按简历原样保留。
 
-- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
-- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
-- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
+## 来源与许可
+
+- 参考网站：https://mronaldo-gif.github.io/mronaldo.github.io/
+- 参考仓库：https://github.com/MRonaldo-gif/mronaldo.github.io
+- 基准提交：`2cee753`（实际完整 SHA 可通过 `git log` 查看）。
+- 保留原仓库 MIT LICENSE（Copyright 2022 Yi Ren）。
+- ParkourFormer 图来自参考仓库 `images/parkourformer.jpg`；仅展示与简历中共同一作研究相关的该图。其他研究卡片为原创 SVG 概念插图，并非实验图或结果图。
+
+原模板的个人照片、其他作者资料、无关论文、统计脚本、Scholar 占位链接和旧构建流程均未用于当前页面。

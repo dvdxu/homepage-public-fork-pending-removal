@@ -1,3 +1,4 @@
-_site/
-push.sh
+__pycache__/
 .DS_Store
+preview-*.png
+browser-profile/
